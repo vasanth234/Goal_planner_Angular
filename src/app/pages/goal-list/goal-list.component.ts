@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component,inject } from '@angular/core';
+import {Router} from '@angular/router';
 
 @Component({
   selector: 'app-goal-list',
@@ -7,5 +8,9 @@ import { Component } from '@angular/core';
   styleUrl: './goal-list.component.css'
 })
 export class GoalListComponent {
+  router=inject(Router);
 
+  navigateTo(){
+  this.router.navigateByUrl('/new-goal')
+}
 }

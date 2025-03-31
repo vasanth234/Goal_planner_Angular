@@ -1,1 +1,38 @@
-<p>goal-list works!</p>
+  <!-- Goals Content -->
+  <div class="container py-5">
+    <div class="d-flex justify-content-between align-items-center mb-4">
+        <h1 class="fw-bold">Goals</h1>
+        <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#goalModal" (click)="navigateTo()">
+            <i class="fas fa-plus me-2"></i>New Goal
+        </button>
+        
+    </div>
+
+    <div class="row">
+        <div class="col-md-6 mb-4">
+            <div class="card goal-card">
+                <div class="card-body">
+                    <h5 class="card-title">Learn Web Development</h5>
+                    <div class="progress mb-3">
+                        <div class="progress-bar" role="progressbar" style="width: 60%">60%</div>
+                    </div>
+                    <h6 class="card-subtitle mb-3">Milestones:</h6>
+                    <ul class="list-group">
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            HTML & CSS
+                            <span class="badge bg-success rounded-pill">Completed</span>
+                        </li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            JavaScript
+                            <span class="badge bg-warning rounded-pill">In Progress</span>
+                        </li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            React.js
+                            <span class="badge bg-secondary rounded-pill">Pending</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

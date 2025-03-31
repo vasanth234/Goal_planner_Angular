@@ -1,12 +1,12 @@
 import { Component, ElementRef, inject, OnInit, signal, ViewChild } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { RouterOutlet,RouterLink } from '@angular/router';
 import {FormsModule} from '@angular/forms';
 import { HttpClient } from '@angular/common/http';
 import { LoginUser } from './Model/User';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet,FormsModule],
+  imports: [RouterOutlet,FormsModule,RouterLink],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
@@ -64,6 +64,8 @@ export class AppComponent implements OnInit{
         next: (res) => {
           debugger;
           alert("Registration success");
+          this.loginUser.emailId = '';
+          this.loginUser.password = '';
           this.closeModel();
         },
         error: (err) => { // Fix: Use 'error' inside the object and add 'err' parameter
@@ -72,18 +74,25 @@ export class AppComponent implements OnInit{
       });
   }
 
+  logout(){
+    this.localstoredData=null;
+    localStorage.removeItem("getUser")
+  }
+
   onLogin(){
     debugger;
-    this.http.post("https://api.freeprojectapi.com/api/GoalTracker/register", this.registerObj)
+    this.http.post("https://api.freeprojectapi.com/api/GoalTracker/login", this.loginUser)
       .subscribe({
         
         next: (res:any) => {
           debugger;
           alert("Login success");
           localStorage.setItem("getUser",JSON.stringify(res))
+          this.localstoredData=res;
+          this.closeModel();
         },
         error: (err) => { // Fix: Use 'error' inside the object and add 'err' parameter
-          alert("Failed login");
+          alert(err.error);
         }
       });
   }

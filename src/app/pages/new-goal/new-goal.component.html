@@ -1,1 +1,362 @@
-<p>new-goal works!</p>
+<!--<div class="container">
+  <div class="row pt-5">
+    <div class="col-12">
+      <div class="card">
+        <div class="card-body">
+          <form [formGroup]="goalForm">
+            <div class="row">
+              <div class="col-7">
+               
+                <div class="mb-3">
+                  <label class="form-label">Goal Title</label>
+                  <input
+                    type="text"
+                    formControlName="goalName"
+                    class="form-control"
+                    required
+                  />
+                </div>
+
+                <div class="row">
+                
+                  <div class="col-6">
+                    <div class="mb-3">
+                      <label class="form-label">Start Date</label>
+                      <input
+                        type="date"
+                        formControlName="startDate"
+                        class="form-control"
+                      />
+                    </div>
+                  </div>
+
+         
+                  <div class="col-6">
+                    <div class="mb-3">
+                      <label class="form-label">Target Date</label>
+                      <input
+                        type="date"
+                        formControlName="endDate"
+                        class="form-control"
+                      />
+                    </div>
+                  </div>
+                </div>
+
+           
+                <div class="mb-3">
+                  <label class="form-label">Description</label>
+                  <textarea
+                    class="form-control"
+                    formControlName="description"
+                  ></textarea>
+                </div>
+              </div>
+
+             
+              <div class="col-5" formArrayName="milestones">
+                @for (item of milestoneList.controls ; track $index) {
+
+                <ng-container [formGroupName]="$index">
+                  <div class="row">
+                  
+                    <div class="col-6">
+                      <div class="mb-3">
+                        <label class="form-label">Title</label>
+                        <input
+                          type="date"
+                          formControlName="startDate"
+                          class="form-control"
+                        />
+                      </div>
+                    </div>
+
+               
+                    <div class="col-6">
+                      <div class="mb-3">
+                        <label class="form-label">Target Date</label>
+                        <input
+                          type="date"
+                          formControlName="targetDate"
+                          class="form-control"
+                        />
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-8">
+                   
+                      <div class="mb-3">
+                        <label class="form-label">Description</label>
+                        <textarea
+                          class="form-control"
+                          formControlName="description"
+                        ></textarea>
+                      </div>
+                    </div>
+                    <div class="col-4">
+                  
+                      <div class="mt-5 text-end">
+                        <button class="btn btn-outline-secondary" type="button">
+                          +
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </ng-container>
+
+                }
+              </div>
+            </div>
+
+  
+            <div class="row pt-5">
+              <div class="col-12 text-center">
+                <button class="btn btn-primary" type="submit">
+                  Create Goal
+                </button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>-->
+
+<div class="container">
+  <div class="row pt-3">
+    <div class="col-12">
+      <div class="card">
+        <div class="card-body">
+          <form novalidate="" class="ng-untouched ng-pristine ng-invalid">
+            <div class="row">
+              <div class="col-7">
+                <div class="mb-3">
+                  <label class="form-label">Goal Title</label
+                  ><input
+                    type="text"
+                    formcontrolname="goalName"
+                    required=""
+                    class="form-control ng-untouched ng-pristine ng-invalid"
+                  />
+                </div>
+                <div class="row">
+                  <div class="col-6">
+                    <div class="mb-3">
+                      <label class="form-label">Start Date</label
+                      ><input
+                        type="date"
+                        formcontrolname="startDate"
+                        class="form-control ng-untouched ng-pristine ng-valid"
+                      />
+                    </div>
+                  </div>
+                  <div class="col-6">
+                    <div class="mb-3">
+                      <label class="form-label">Target Date</label
+                      ><input
+                        type="date"
+                        formcontrolname="endDate"
+                        class="form-control ng-untouched ng-pristine ng-valid"
+                      />
+                    </div>
+                  </div>
+                </div>
+                <div class="mb-3">
+                  <label class="form-label">Description</label
+                  ><textarea
+                    formcontrolname="description"
+                    class="form-control ng-untouched ng-pristine ng-valid"
+                  ></textarea>
+                </div>
+              </div>
+              <div
+                formarrayname="milestones"
+                class="col-5 ng-untouched ng-pristine ng-valid"
+              >
+                <div class="row">
+                  <div class="col-6">
+                    <div class="mb-1">
+                      <label class="form-label">Title</label
+                      ><input
+                        type="text"
+                        formcontrolname="milestoneName"
+                        class="form-control ng-untouched ng-pristine ng-valid"
+                      />
+                    </div>
+                  </div>
+                  <div class="col-6">
+                    <div class="mb-1">
+                      <label class="form-label">Target Date</label
+                      ><input
+                        type="date"
+                        formcontrolname="targetDate"
+                        class="form-control ng-untouched ng-pristine ng-valid"
+                      />
+                    </div>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-8">
+                    <label class="form-label">Description</label
+                    ><textarea
+                      formcontrolname="description"
+                      class="form-control ng-untouched ng-pristine ng-valid"
+                    ></textarea>
+                  </div>
+                </div>
+                <!---->
+                <div class="row">
+                  <div class="col-6">
+                    <div class="mb-1">
+                      <label class="form-label">Title</label
+                      ><input
+                        type="text"
+                        formcontrolname="milestoneName"
+                        class="form-control ng-untouched ng-pristine ng-valid"
+                      />
+                    </div>
+                  </div>
+                  <div class="col-6">
+                    <div class="mb-1">
+                      <label class="form-label">Target Date</label
+                      ><input
+                        type="date"
+                        formcontrolname="targetDate"
+                        class="form-control ng-untouched ng-pristine ng-valid"
+                      />
+                    </div>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-8">
+                    <label class="form-label">Description</label
+                    ><textarea
+                      formcontrolname="description"
+                      class="form-control ng-untouched ng-pristine ng-valid"
+                    ></textarea>
+                  </div>
+                </div>
+                <!---->
+                <div class="row">
+                  <div class="col-6">
+                    <div class="mb-1">
+                      <label class="form-label">Title</label
+                      ><input
+                        type="text"
+                        formcontrolname="milestoneName"
+                        class="form-control ng-untouched ng-pristine ng-valid"
+                      />
+                    </div>
+                  </div>
+                  <div class="col-6">
+                    <div class="mb-1">
+                      <label class="form-label">Target Date</label
+                      ><input
+                        type="date"
+                        formcontrolname="targetDate"
+                        class="form-control ng-untouched ng-pristine ng-valid"
+                      />
+                    </div>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-8">
+                    <label class="form-label">Description</label
+                    ><textarea
+                      formcontrolname="description"
+                      class="form-control ng-untouched ng-pristine ng-valid"
+                    ></textarea>
+                  </div>
+                </div>
+                <!---->
+                <div class="row">
+                  <div class="col-6">
+                    <div class="mb-1">
+                      <label class="form-label">Title</label
+                      ><input
+                        type="text"
+                        formcontrolname="milestoneName"
+                        class="form-control ng-untouched ng-pristine ng-valid"
+                      />
+                    </div>
+                  </div>
+                  <div class="col-6">
+                    <div class="mb-1">
+                      <label class="form-label">Target Date</label
+                      ><input
+                        type="date"
+                        formcontrolname="targetDate"
+                        class="form-control ng-untouched ng-pristine ng-valid"
+                      />
+                    </div>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-8">
+                    <label class="form-label">Description</label
+                    ><textarea
+                      formcontrolname="description"
+                      class="form-control ng-untouched ng-pristine ng-valid"
+                    ></textarea>
+                  </div>
+                </div>
+                <!---->
+                <div class="row">
+                  <div class="col-6">
+                    <div class="mb-1">
+                      <label class="form-label">Title</label
+                      ><input
+                        type="text"
+                        formcontrolname="milestoneName"
+                        class="form-control ng-untouched ng-pristine ng-valid"
+                      />
+                    </div>
+                  </div>
+                  <div class="col-6">
+                    <div class="mb-1">
+                      <label class="form-label">Target Date</label
+                      ><input
+                        type="date"
+                        formcontrolname="targetDate"
+                        class="form-control ng-untouched ng-pristine ng-valid"
+                      />
+                    </div>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-8">
+                    <label class="form-label">Description</label
+                    ><textarea
+                      formcontrolname="description"
+                      class="form-control ng-untouched ng-pristine ng-valid"
+                    ></textarea>
+                  </div>
+                </div>
+                <!----><!---->
+                <div class="row">
+                  <div class="col-12 text-end">
+                    <button
+                      type="button"
+                      class="btn btn-outline-secondary mt-5"
+                    >
+                      +
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row pt-3">
+              <div class="col-12 text-center">
+                <button type="button" class="btn btn-primary" (click)="setGoal()">
+                  Create Goal
+                </button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
